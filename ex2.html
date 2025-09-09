@@ -10,6 +10,13 @@
         }
 
         /* add CSS code here */
+        .square {
+            border-radius: 0px;
+        }
+        
+        .circle {
+            border-radius: 50%;
+        }
         
     </style>
 
@@ -24,8 +31,19 @@
     <button onclick="changeShape()">Make a change!</button>
 
     <script>
-        var square=true;
+        var square = true;
        // add code here
+        function changeShape() {
+            let divElem = document.getElementById("div1");
+            if (square) {
+                divElem.className = "circle";
+                square = false;
+            } else {
+                divElem.className = "square";
+                square = true;
+            }
+        }
+
         
     </script>
 
